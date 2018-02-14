@@ -1,0 +1,115 @@
+body
+{
+	-webkit-print-color-adjust:exact;
+}
+.page_wrapper
+{
+	width:750px;
+	background-color:#FAFAFA;
+	height:900px;
+	padding:10px 10px;
+}
+		/*----Header table-----*/
+.header
+{
+	height: auto !important;
+	width: 95% !important;
+	text-align:center;
+	border-collapse:collapse;
+}
+.header tr td
+{
+	font-weight:bold;
+}
+
+	/*----Information  table-----*/
+.info_header
+{
+	background-color:#2A2A2A !important;
+	font-weight:900;
+	color:#E9E9E9;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding:1px;
+	font-size:16px;
+	margin-top:50px;
+}    
+.info_detail
+{
+	width:90%;
+	border-collapse:collapse;
+	margin-top:7px;
+}
+.info_detail tr td
+{
+	text-align:left;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:18px;
+}
+.info_detail tr td.tag
+{
+	text-align:left;
+	color:#575757;
+	width:150px;
+	font-weight:900;
+	font-size:16px;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	letter-spacing:1px;
+}
+.info_detail tr td img
+{
+	width:120px;
+	height:150px;
+	padding:5px;
+	outline:1px solid #989898;
+}
+			/*----Extra Information table-----*/
+.extra_info_detail
+{
+	width:100%;
+	border-collapse:collapse;
+	margin-top:20px;
+	border:none;
+}
+.extra_info_detail tr th
+{
+	text-align:left;
+	background-color:#315164 !important;
+	padding:2px 20px;
+	color:#FFFFFF;
+	font-size:20px;
+}
+.extra_info_detail tr td
+{
+	text-align:left;
+	padding:10px 45px;
+	text-align:left;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:18px;
+}
+.extra_info_detail tr.alt td
+{
+	text-align:left;
+	padding:10px 5px;
+	border:1px solid #dfdfdf;
+	padding:20px 10px;
+}
+.extra_info_detail tr td.tag
+{
+	text-align:left;
+	width:150px;
+	font-weight:900;
+	font-size:16px;
+	color:#5C5C5C;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	letter-spacing:1px;
+}
+
+@media print
+{
+	body{-webkit-print-color-adjust:exact;}
+}
+.vendirListHeading th
+{
+	background-color:red !important;
+	color:white !important;
+}
