@@ -1,6 +1,16 @@
-#1 Import SQL_Students_db.sql to php Myadmin From SQL_File folder 
-#2 Put Web_Files into http folder 
 
------------------------------------------------------------------------
+This Web application stores students information to mySql database of class 6 to class 12
 
-Goto You Host Address And you will able to use this Web Application 
+  -----------------------------------------------------------------
+
+  1 Import SQL_Students_db.sql to phpmyadmin From SQL_File folder .
+
+  2 Put Web_Files into http folder .
+
+  3 Now browse for website .
+  
+  You Can Uderstand Better if you are devloperv :)
+
+  ----------------------------------------------------------------------
+
+I created this Web Application during my School now this is open Source
