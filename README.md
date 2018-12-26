@@ -9,8 +9,9 @@ This Web application stores students information to mySql database of class 6 to
 
   3 Now browse for website .
   
-  You Can Uderstand Better if you are devloperv :)
+  You Can Uderstand Better if you are devloper :)
 
   ----------------------------------------------------------------------
+  ![Website_demo](screenshot.PNG)
 
 I created this Web Application during my School now this is open Source
