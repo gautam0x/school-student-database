@@ -60,35 +60,36 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		}
 	}
 
+	/*---Upload  image---*/
+	$temp			= explode(".",$_FILES['photo']['name']);
+	$extension		= end($temp);	
+	$photo			= $admission_no.".".$extension;
+	$img_path		= "photos/".$photo;
+	$allowedeEXT	= array("jpg","jpeg");
+
+	if(!in_array($extension,$allowedeEXT))
+	{
+		$report_msg = "<div class=error_msg> Upload only jpg /jpeg file</div>";
+		$flag = 0;
+	}
+	else if($_FILES["photo"]["size"] > 100000 )
+	{
+		$report_msg = "<div class=error_msg>Size Of Uploaded Photo Must Be Less Than 100KB</div>";
+		$flag = 0;
+	}
+	else
+	{
+		if(! move_uploaded_file( $_FILES['photo']['tmp_name'],$img_path))
+		{
+			$report_msg = "<div class=error_msg>File Uploading Error | Check Directory Permisson </div>";
+			$flag = 0;
+		}
+	}
+
 	/*Insert Data To Its database*/
 	if($flag != 0)
 	{
-		/*---Upload  image---*/
-		$temp			= explode(".",$_FILES['photo']['name']);
-		$extension		= end($temp);	
-		$photo			= $admission_no.".".$extension;
-		$img_path		= "photos/".$photo;
-		$allowedeEXT	= array("jpg","jpeg");
-
-		if(!in_array($extension,$allowedeEXT))
-		{
-			$report_msg = "<div class=error_msg> Upload only jpg /jpeg file</div>";
-			$flag = 0;
-		}
-		else if($_FILES["photo"]["size"] > 100000 )
-		{
-			$report_msg = "<div class=error_msg> Size of photo is not more than 100KB </div>";
-			$flag = 0;
-		}
-		else
-		{
-			if(! move_uploaded_file( $_FILES['photo']['tmp_name'],$img_path))
-			{
-				$report_msg = "<div class=error_msg>File Uploading Error | Check Directory Permisson </div>";
-				$flag = 0;
-			}
-		}
-		
+	
 		/*---Insert info into Database---*/
 		$sql = "INSERT INTO class_$class VALUES('$name', '$dob', '$admission_no', '$class' , '$father_name', '$mother_name', '$address', '$locality','$category', '$mobile', '$email' ,'$gender','$photo');";
 		if(mysqli_query($conn ,$sql))
