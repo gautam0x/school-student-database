@@ -82,7 +82,11 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		}
 		else
 		{
-			move_uploaded_file( $_FILES['photo']['tmp_name'],$img_path);
+			if(! move_uploaded_file( $_FILES['photo']['tmp_name'],$img_path))
+			{
+				$report_msg = "<div class=error_msg>File Uploading Error | Check Directory Permisson </div>";
+				$flag = 0;
+			}
 		}
 		
 		/*---Insert info into Database---*/

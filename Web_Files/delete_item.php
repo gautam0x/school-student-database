@@ -17,7 +17,7 @@
 <center>
 			<!-----------Header Section--------------->
 <div id="main-wrapper">
-	<div class="website-header">https://github.com/gautam0x/school-student-database.git
+	<div class="website-header">
 		<div class=header-content>
 			<img src="logo.gif" />
 			<br/>
@@ -81,17 +81,17 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
 	
 	/*display and delete table*/
 	
-	$sql = "SELECT name,dob,house,admission_no,mobile,email,gender,image FROM class_$class WHERE admission_no='$adm_no';";
+	$sql = "SELECT * FROM class_$class WHERE admission_no='$adm_no';";
 	$retval = mysqli_query($conn, $sql);
-	
+
+
 	while($row = mysqli_fetch_assoc($retval))
 	{
-		echo "<table class=data_list><tr><th>Name</th><th>DOB</th><th>Admission no.</th><th>House </th><th>Mobile</th><th>Email</th><th>Gender</th></tr>";
+		echo "<table class=data_list><tr><th>Name</th><th>DOB</th><th>Admission no.</th><th>Mobile</th><th>Email</th><th>Gender</th></tr>";
 		echo "<tr>
 		<td>{$row['name']}</td>
 		<td>{$row['dob']}</td>
 		<td>{$row['admission_no']}</td>
-		<td>{$row['house']}</td>
 		<td>{$row['mobile']}</td>
 		<td>{$row['email']}</td>
 		<td>{$row['gender']}</td>
