@@ -69,7 +69,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		$photo			= $admission_no.".".$extension;
 		$img_path		= "photos/".$photo;
 		$allowedeEXT	= array("jpg","jpeg");
-		
+
 		if(!in_array($extension,$allowedeEXT))
 		{
 			$report_msg = "<div class=error_msg> Upload only jpg /jpeg file</div>";

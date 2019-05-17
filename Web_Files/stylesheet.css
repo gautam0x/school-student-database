@@ -37,7 +37,8 @@ body
 .header-content img
 {
 	float:left;
-	margin-right:32px;
+	margin:0px 80px;
+	width:150px;
 }
 				/*-------------------Welcome Section---------------*/
 

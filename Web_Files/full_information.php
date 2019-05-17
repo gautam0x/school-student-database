@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
 <table class="header" border="0">
 <tr>
 <td>
-<img src="logo_black.gif" alt=""/>
+<img src="logo_black.gif" style="width:150px;" alt=""/>
 </td>
 <td>
 <span style="font-size:34px">XYZ Pubic School</span>
